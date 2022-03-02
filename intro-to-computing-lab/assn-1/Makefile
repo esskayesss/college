@@ -2,7 +2,7 @@ SRCS := $(wildcard *.c)
 # This is a substitution reference. http://www.gnu.org/software/make/manual/make.html#Substitution-Refs
 BINS := $(SRCS:%.c=bin/%)
 
-CFLAGS=-Wall -g
+CFLAGS=-Wall -g -lm
 
 # Tell make that the all target has every binary as a prequisite and tell make that it will not create an `all` file (see http://www.gnu.org/software/make/manual/make.html#Phony-Targets).
 .PHONY: all

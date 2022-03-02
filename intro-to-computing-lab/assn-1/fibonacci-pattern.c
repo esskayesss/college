@@ -5,6 +5,9 @@ int main(){
 
     printf("Enter the number of rows: ");
     scanf("%d", &rows);
+    if(rows == 0) return 0;
+    printf("*\n");
+    rows--;
 
     for(int i = 0; i < rows; i++){
         int cols = first + second;
