@@ -5,8 +5,12 @@ int main(){
     char ch;
     printf("Enter a character: ");
     scanf("%c", &ch);
-    ch = tolower(ch);
-    switch(ch){
+    char ch_l = tolower(ch);
+    if(!isalpha(ch)){
+        printf("Entered character is not an alphabet.\n");
+        return 0;
+    }
+    switch(ch_l){
         case 'a':
         case 'e':
         case 'i':
