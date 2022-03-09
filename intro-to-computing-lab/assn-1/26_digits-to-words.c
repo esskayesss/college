@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 
 int main(){
     const char *in_words[10] = {"ZERO", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE"};
@@ -7,7 +8,7 @@ int main(){
     char ch;
 
     while((ch = getchar()) != EOF && ch != '\n')
-        printf("%s ", in_words[ch - '0']);
+        if(isdigit(ch)) printf("%s ", in_words[ch - '0']);
     
     printf("\n");
 }
