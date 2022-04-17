@@ -13,10 +13,15 @@ int main(){
     scanf("%d%d", &num1, &num2);
 
     int a = num1, b = num2;
+    if(abs(b) > abs(a)) swap(&a, &b);
+    if(b == 0){
+        printf("The HCF of %d and %d is %d.\n", num1, num2, a);
+        return 0;
+    }
 
     while(a - b != 0){
         if(b > a) swap(&a, &b);
-        int diff = abs(a - b);
+        int diff = a - b;
         a = b, b = diff;
     }
     printf("The HCF of %d and %d is %d\n", num1, num2, a);

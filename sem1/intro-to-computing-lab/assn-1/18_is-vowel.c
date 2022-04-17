@@ -31,7 +31,10 @@ int main(){
     printf("Enter a character: ");
     scanf("%c", &ch);
     ch = tolower(ch);
-    
+    if(!isalpha(ch)){
+        printf("The entered character is not an alphabet.\n");
+        return 0;
+    }
     is_vowel_switch(ch);
     is_vowel_if(ch);
 }
