@@ -7,8 +7,9 @@ int main(){
     scanf("%d%d", &rows, &cols);
     printf("Enter the number of rows and columns in second matrix: ");
     scanf("%d%d", &rows_2, &cols_2);
-    if(rows != rows_2 && cols != cols_2){
+    if(rows != rows_2 || cols != cols_2){
         fprintf(stderr, "Invalid sizes. The number of rows and columns in both the matrices must be equal.\n");
+        exit(1);
     }
     int m1[rows][cols], m2[rows][cols], sum[rows][cols];
     printf("Enter the elements of matrix 1\n");
